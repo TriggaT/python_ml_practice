@@ -21,7 +21,7 @@ print(slice_second_from_end)
 (x_values, y_values) = ([1,2,3],[-1,-2,-3])
 
 # print(f'PLOT THIS POINT: {x_values[2]}, {y_values[0]}' ) - string interpolation python 3.6+
-print("PLOT THIS POINT: %s, %s" % (x_values[2], y_values[0])) #old version of string interpolation
+print("PLOT POINT: %s, %s" % (x_values[2], y_values[0])) #old version of string interpolation
 
 tuple = (x_values, y_values) #allows you to pull out each as array and delve into each array/list
 

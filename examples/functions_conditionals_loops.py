@@ -18,15 +18,15 @@ def name_printer(name, value):
 
 name_printer("Malcolm", 123)
 
-# for loops
+#for loops
 
-# for i in [1,2,3,4,5]:
-#     print("VALUE:", i)
+for i in [1,2,3,4,5]:
+    print("VALUE:", i)
 
-# for i in range(20):
-#     print(i)
+for i in range(20):
+    print(i)
 
-# While loops 
+#While loops 
 
 x = 10 
 while x > 0:
