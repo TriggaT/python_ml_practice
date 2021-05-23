@@ -18,5 +18,5 @@ my_classifier.fit(features_train, labels_train)
 
 prediction = my_classifier.predict(features_test)
 
-print(prediction)
+print(accuracy_score(labels_test,prediction))
 
