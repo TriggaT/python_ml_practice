@@ -13,3 +13,9 @@ features_train, features_test, labels_train, labels_test = train_test_split(feat
 
 my_classifier = KNeighborsClassifier()
 
+my_classifier.fit(features_train, labels_train)
+
+prediction = my_classifier.predict(features_test)
+
+print(prediction)
+
