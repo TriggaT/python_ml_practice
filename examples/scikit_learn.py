@@ -1,7 +1,11 @@
 from sklearn import datasets
 
-iris_dataset = datasets.load_iris()
+iris = datasets.load_iris()
 
-print(iris_dataset)
+# print(iris)
 
+features = iris.data
+labels = iris.target
 
+# print(features)
+print(labels)
