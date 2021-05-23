@@ -1,5 +1,6 @@
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
 
 iris = datasets.load_iris()
 
@@ -10,7 +11,5 @@ labels = iris.target
 
 features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size=.5)
 
-print(features_train)
+my_classifier = KNeighborsClassifier()
 
-# print(features)
-# print(labels)
