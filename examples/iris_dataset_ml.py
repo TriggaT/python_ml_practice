@@ -20,3 +20,19 @@ prediction = my_classifier.predict(features_test)
 
 print(accuracy_score(labels_test,prediction))
 
+#should be versicolor flower
+iris1 = [[4.7, 2.5, 3.1, 1.2]]
+#should be verginica flower
+iris2 = [[7.1,2.9,5.3,2.4]]
+iris_prediction = my_classifier.predict(iris2)
+
+if iris_prediction[0] == 0:
+    print("Setosa")
+
+if iris_prediction[0] == 1:
+    print("Versicolor")
+
+if iris_prediction[0] == 2:
+    print("Virginica")
+
+
