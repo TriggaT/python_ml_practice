@@ -2,13 +2,38 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
+from scipy.spatial import distance
+
+#distance between two points in euclidean space 
+
+def euc(a,b):
+    return distance.euclidean(a,b)
 
 # k nearest neighbor class 
-
 class SimpleKNN():
     def fit(self, features_train, labels_train):
         self.features_train = features_train
         self.labels_train = labels_train
+
+
+    def predict(self, features_test):
+        predictions = []
+        for item in features_test:
+            label = self.closest(item)
+            predictions.append(label)
+
+        return predictions
+
+    def closest(self, item):
+        best_distance = euc(item, self.features_train[0])
+        best_index = 0 
+        for i in range(1, len(self.features_train)):
+            distance = euc(item, self.features_train[i])
+            if distance < best_distance:
+                best_distance = distance
+                best_index = 1
+        
+        return self.labels_train[best_index]
 
 
 
