@@ -15,7 +15,6 @@ class SimpleKNN():
         self.features_train = features_train
         self.labels_train = labels_train
 
-
     def predict(self, features_test):
         predictions = []
         for item in features_test:
@@ -31,10 +30,9 @@ class SimpleKNN():
             distance = euc(item, self.features_train[i])
             if distance < best_distance:
                 best_distance = distance
-                best_index = 1
+                best_index = i
         
         return self.labels_train[best_index]
-
 
 
 
@@ -49,7 +47,8 @@ labels = iris.target
 
 features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size=.5)
 
-my_classifier = KNeighborsClassifier()
+my_classifier = SimpleKNN()
+# my_classifier = KNeighborsClassifier()
 
 my_classifier.fit(features_train, labels_train)
 
