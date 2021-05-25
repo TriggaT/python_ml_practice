@@ -3,6 +3,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
+# k nearest neighbor class 
+
+class SimpleKNN():
+    def fit(self, features_train, labels_train):
+        self.features_train = features_train
+        self.labels_train = labels_train
+
+
+
+
+
+
 iris = datasets.load_iris()
 
 # print(iris)
